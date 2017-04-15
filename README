@@ -42,6 +42,11 @@ For building on Windows:
    `make -f Makefile.mgw' while in the `windows' subdirectory to
    build all the PuTTY binaries.
 
+   http://blog.cuicc.com/blog/2011/08/23/putty-with-auto-login-password/
+
+   use：    $cd putty-src/windows
+            $make -f makefile.cyg
+
    MinGW and friends can lag behind other toolchains in their support
    for the Windows API. Compile-time levers are provided to exclude
    some features; the defaults are set appropriately for the

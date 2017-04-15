@@ -618,7 +618,7 @@ static void sessionsaver_data_free(void *ssdv)
     sfree(ssd);
 }
 
-/* 
+/*
  * Helper function to load the session selected in the list box, if
  * any, as this is done in more than one place below. Returns 0 for
  * failure.
@@ -1848,7 +1848,7 @@ void setup_config_box(struct controlbox *b, int midsession,
      * The Window/Selection panel.
      */
     ctrl_settitle(b, "Window/Selection", "Options controlling copy and paste");
-	
+
     s = ctrl_getset(b, "Window/Selection", "mouse",
 		    "Control use of mouse");
     ctrl_checkbox(s, "Shift overrides application's use of mouse", 'p',
@@ -2000,6 +2000,10 @@ void setup_config_box(struct controlbox *b, int midsession,
 	    ctrl_editbox(s, "Auto-login username", 'u', 50,
 			 HELPCTX(connection_username),
 			 conf_editbox_handler, I(CONF_username), I(1));
+			 c = ctrl_editbox(s, "Auto-login password", 'w', 50,
+ 			 HELPCTX(connection_passwoed),
+ 			 conf_editbox_handler, I(CONF_password), I(1));
+			 c-&gt;editbox.password = 1;
 	    {
 		/* We assume the local username is sufficiently stable
 		 * to include on the dialog box. */
@@ -2463,7 +2467,7 @@ void setup_config_box(struct controlbox *b, int midsession,
 		 * absolutely no consensus on where to keep the
 		 * libraries, there'll need to be a flag alongside
 		 * ngsslibs to control whether the file selector is
-		 * displayed. 
+		 * displayed.
 		 */
 
 		ctrl_filesel(s, "User-supplied GSSAPI library path:", 's',

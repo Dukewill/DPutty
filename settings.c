@@ -407,7 +407,7 @@ static void gprefs(void *sesskey, const char *name, const char *def,
     sfree(value);
 }
 
-/* 
+/*
  * Write out a preference list.
  */
 static void wprefs(void *sesskey, const char *name,
@@ -506,6 +506,7 @@ void save_open_settings(void *sesskey, Conf *conf)
     write_setting_i(sesskey, "ProxyLogToTerm", conf_get_int(conf, CONF_proxy_log_to_term));
     wmap(sesskey, "Environment", conf, CONF_environmt, TRUE);
     write_setting_s(sesskey, "UserName", conf_get_str(conf, CONF_username));
+    write_setting_s(sesskey, "Password", conf_get_str(conf, CONF_password));
     write_setting_i(sesskey, "UserNameFromEnvironment", conf_get_int(conf, CONF_username_from_env));
     write_setting_s(sesskey, "LocalUserName", conf_get_str(conf, CONF_localusername));
     write_setting_i(sesskey, "NoPTY", conf_get_int(conf, CONF_nopty));
@@ -788,6 +789,7 @@ void load_open_settings(void *sesskey, Conf *conf)
     gppi(sesskey, "ProxyLogToTerm", FORCE_OFF, conf, CONF_proxy_log_to_term);
     gppmap(sesskey, "Environment", conf, CONF_environmt);
     gpps(sesskey, "UserName", "", conf, CONF_username);
+    gpps(sesskey, "PassWord", "", conf, CONF_password);
     gppi(sesskey, "UserNameFromEnvironment", 0, conf, CONF_username_from_env);
     gpps(sesskey, "LocalUserName", "", conf, CONF_localusername);
     gppi(sesskey, "NoPTY", 0, conf, CONF_nopty);
