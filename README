@@ -1,3 +1,7 @@
+个人测试，为 putty 添加记住密码功能
+
+编译环境无法搭建成功，编译失败。
+
 This is the README for the source archive of PuTTY, a free Win32
 and Unix Telnet and SSH client.
 
