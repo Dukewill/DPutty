@@ -1,7 +1,7 @@
-###个人测试，为 putty 添加记住密码功能
+### 个人测试，为 putty 添加记住密码功能
 
-####编译环境无法搭建成功，编译失败。
-####错误信息如下，求助：
+#### 编译环境无法搭建成功，编译失败。
+#### 错误信息如下，求助：
 
 ![](https://raw.githubusercontent.com/Dukewill/DPutty/master/Pic/MinGW-Erro1.JPG)
 
