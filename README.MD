@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Dukewill/DPutty.svg?branch=master)](https://travis-ci.org/Dukewill/DPutty)
 ### 个人测试，为 putty 添加记住密码功能
 
 #### 编译环境无法搭建成功，编译失败。
