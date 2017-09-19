@@ -1,9 +1,6 @@
 language: c
 
-install: make get-deps
-
-before_install:
-  - test -n $CC && unset CC
+os: windows
   
 script:
 - cd ./windows
