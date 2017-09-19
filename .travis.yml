@@ -1,4 +1,4 @@
 language: c
 script:
-- cd /windows
-- make -f Makefile.mgw
+- cd ./windows
+- make -f Makefile.vc
