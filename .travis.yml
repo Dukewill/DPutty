@@ -1,4 +1,10 @@
 language: c
+
+install: make get-deps
+
+before_install:
+  - test -n $CC && unset CC
+  
 script:
 - cd ./windows
-- make -f Makefile.vc
+- make -f Makefile.mgw
