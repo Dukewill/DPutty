@@ -1,4 +1,5 @@
 language: c
-script
+os: windows
+script:
 - cd ./windows
 - make -f Makefile.mgw
