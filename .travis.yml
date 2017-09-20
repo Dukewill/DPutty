@@ -43,8 +43,8 @@ before_install:
     - eval "${MATRIX_EVAL}"
   
 script:
-  - cd ./windows
-  - make -f Makefile.mgw
+  - cd ./unix
+  - make -f Makefile.gtk
   
 notifications:
   email:
